@@ -1,0 +1,111 @@
+body {
+  --background-white: #FAF9F6;
+  --text-navy: #202A44;
+  background-color: var(--background-white);
+}
+
+.page-body {
+  margin: 2cm 12cm;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: var(--text-navy);
+}
+
+hr {
+  color: var(--text-navy);
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.outer-table {
+  text-align: center;
+  width: 100%;
+  margin: 25px 0px;
+  color: var(--text-navy);
+  border: 2px solid var(--text-navy);
+  border-collapse: collapse;
+}
+
+.outer-table td, .outer-table th {
+  border: 2px solid var(--text-navy);
+}
+
+.frame-td {
+  text-align: center;
+  border-collapse: collapse;
+  width: 50px;
+  padding: 0px;
+}
+
+.inner-table {
+  text-align: center;
+  width: 52px;
+  height: 52px;
+  margin: -1px;
+  padding: 0;
+  color: var(--text-navy);
+  border-collapse: collapse;
+  border: 1px solid var(--text-navy);
+  border-radius: 1px;
+}
+
+
+.inner-table td, .inner-table th {
+  margin: 0px;
+  padding: 0px;
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--text-navy);
+}
+
+.inner-table-roll {
+  text-align: center;
+}
+
+/* The css for button and its subclasses is copied from an open source website. */
+button {
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:enabled:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: #9fba85;
+  cursor: default;
+  
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 10px 30px;
+  }
+}

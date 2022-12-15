@@ -1,0 +1,41 @@
+<!-- Aurelia is totally new to me. I decided to use this project as a chance to get my feet wet.
+Some concepts, like using its databinding features, are familiar to me, but if I worked with
+y'all, I would study this more in depth. -->
+
+<template>
+  <require from="bowling-logic/bowling.css"></require>
+  <div class="page-body">
+    <h1>Bowling with Venminder</h1>
+    <hr>
+    <div class="buttons-container">
+      <button disabled.bind="game.gameOver" click.trigger="game.rollBall()">Roll!</button>
+      <button click.trigger="game.reset()">Reset</button>
+    </div>
+    <hr>
+    <table class="outer-table">
+      <tr>
+        <th colspan="2">Player Names</th>
+        <th repeat.for="frame of game.frames">${frame.frameNumber}</th>
+        <th>Final</th>
+      </tr>
+      <tr repeat.for="player of game.players">
+        <td>${$index + 1}</td>
+        <td>${player.name}</td>
+        <td class="frame-td" repeat.for="frame of game.frames">
+          <table class="inner-table">
+            <tr>
+              <!-- In the game logic, I have spares set to be stored as a roll of 11, and a strike set to 12.
+              This doesn't make sense to display, so I need a helper function. -->
+              <td class="inner-table-roll" repeat.for="roll of frame.rolls">${game.getScoreboardCharacter(roll)}</td>
+            </tr>
+            <tr>
+              <!-- I use -1 as a placeholder for an unplayed frame's score. -->
+              <td colspan.bind="frame.rolls.length">${frame.score !== -1 ? frame.score : "-"}</td>
+            </tr>
+          </table>
+        </td>
+        <td>${game.score}</td>
+      </tr>
+    </table>
+  </div>
+</template>
