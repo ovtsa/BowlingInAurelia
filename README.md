@@ -6,7 +6,8 @@ For more information, go to https://aurelia.io/docs/cli/webpack
 
 ## Prerequisites
 
-You will need node package manager installed. Once node is installed, install dependencies with
+You will need node package manager installed. Once node is installed, enter project
+directory and install dependencies with
 
 `npm install`
 
