@@ -4,30 +4,21 @@ This project is bootstrapped by [aurelia-cli](https://github.com/aurelia/cli).
 
 For more information, go to https://aurelia.io/docs/cli/webpack
 
-## Run dev app
+## Prerequisites
 
-Run `npm start`, then open `http://localhost:8080`
+You will need node package manager and Aurelia installed. Once node is installed, install Aurelia with
 
-You can change the standard webpack configurations from CLI easily with something like this: `npm start -- --open --port 8888`. However, it is better to change the respective npm scripts or `webpack.config.js` with these options, as per your need.
+`npm install aurelia-cli -g`
 
-To enable Webpack Bundle Analyzer, do `npm run analyze` (production build).
+## Running the Bowling application
 
-To enable hot module reload, do `npm start -- --hmr`.
+From within the bowling directory, run
 
-To change dev server port, do `npm start -- --port 8888`.
+`au run`
 
-To change dev server host, do `npm start -- --host 127.0.0.1`
+This will open up `http://localhost:8080` to your application. Access it with a web browser.
 
-**PS:** You could mix all the flags as well, `npm start -- --host 127.0.0.1 --port 7070 --open --hmr`
+## Running tests
 
-For long time aurelia-cli user, you can still use `au run` with those arguments like `au run --env prod --open --hmr`. But `au run` now simply executes `npm start` command.
+To run the tests, run `au test` or `au jest`
 
-## Build for production
-
-Run `npm run build`, or the old way `au build --env prod`.
-
-## Unit tests
-
-Run `au test` (or `au jest`).
-
-To run in watch mode, `au test --watch` or `au jest --watch`.
