@@ -12,7 +12,7 @@ You will need node package manager and Aurelia installed. Once node is installed
 
 ## Running the Bowling application
 
-From within the bowling directory, run
+From within the project directory, run
 
 `au run`
 
