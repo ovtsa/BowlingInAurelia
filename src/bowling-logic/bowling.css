@@ -5,7 +5,8 @@ body {
 }
 
 .page-body {
-  margin: 2cm 12cm;
+  margin: 2cm auto;
+  width: 750px;
 }
 
 h1 {
