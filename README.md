@@ -6,9 +6,9 @@ For more information, go to https://aurelia.io/docs/cli/webpack
 
 ## Prerequisites
 
-You will need node package manager and Aurelia installed. Once node is installed, install Aurelia with
+You will need node package manager installed. Once node is installed, install dependencies with
 
-`npm install aurelia-cli -g`
+`npm install`
 
 ## Running the Bowling application
 
